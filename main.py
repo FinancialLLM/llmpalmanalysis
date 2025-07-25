@@ -12,8 +12,7 @@ img = st.camera_input("Take a picture", disabled = not enable)
 def encode_image(image):
     return base64.b64encode(image).decode("utf-8")
 
-# api_key = st.sidebar.text_input("OpenAI API Key", type = "password")
-api_key = "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"
+api_key = st.sidebar.text_input("OpenAI API Key", type = "password")
 
 if img:
 
