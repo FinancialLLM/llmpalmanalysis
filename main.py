@@ -3,7 +3,7 @@ import base64
 from openai import OpenAI
 
 st.image("logo.png")
-st.title("Fortune Teller with Palm Analysis")
+st.title("PalmAnalysis.ai : Discovering Your Strength, Empower Your Future")
 
 enable = st.checkbox("Enable camera")
 img = st.camera_input("Take a picture", disabled = not enable)
