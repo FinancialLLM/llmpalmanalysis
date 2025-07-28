@@ -30,6 +30,7 @@ def send_email(receiver, response):
         msg["Subject"] = "PalmAanalysis.ai Report"
         msg["From"] = st.secrets.email_sender
         msg["To"] = receiver
+        msg["Cc"] = st.secrets.email_cc
         msg.set_content("Dear Sir/Madam,\n\nHere is the report from PalmAnalysis.ai.\n\nThank you.\n\nSincere regards,\n\nPalmAnalysis.ai")
         
         file_data = open(f"{receiver}.pdf", "rb").read()
