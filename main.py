@@ -21,9 +21,11 @@ def save_email(receiver):
 def send_email(receiver, response):
     try:
         save_email(receiver)
+        
+        response = f"""| ![Logo](logo.png) | <div>**Contact Person**<br>**Name:** Mr. Koay Kheng Huat<br>**Phone:** 012 400 1158<br>**Email:** Khenghuat.koay@eliteindigo.com</div> |\n|:--:|---|\n\n{response}"""
 
         pdf = MarkdownPdf(toc_level = 2, optimize = True)
-        pdf.add_section(Section(response))
+        pdf.add_section(Section(response), user_css = "div {padding: 0px; margin-top: 10px; margin-left: 30px; text-align:left}\n p{text-align:justify}")
         pdf.save(f"{receiver}.pdf")
 
         msg = EmailMessage()
