@@ -71,7 +71,7 @@ if img:
                     {
                         "role": "user",
                         "content": [
-                            { "type": "input_text", "text": "You are an expert in Palm Reading. You will get my left palm, analyze the image and give me a detail report on my strengths and give me top 3 career advise. You also will provide me 3 areas of development." },
+                            { "type": "input_text", "text": "You are now a fortune teller. Please help me read this person’s palm and tell me about his traits and personality. Then, give me advice on what kind of career suits him, as well as insights into his destiny, health, wealth, love life, and family. This person is male." },
                             {
                                 "type": "input_image",
                                 "image_url": f"data:image/jpeg;base64,{base64_image}",
@@ -103,3 +103,4 @@ if img:
 else:
 
     st.session_state.has_response = False
+
